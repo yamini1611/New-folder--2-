@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label> ENTER YOUR NAME : </label>
+    <input type="text" name="pname"><br>
+    <label> ENTER YOUR AGE : </label>
+    <input type="text" name="age"><br>
+    <label> ENTER YOUR GENDER : </label>
+    <input type="text" name="gen"><br>
+    <label> ENTER YOUR ADDRESS : </label>
+    <input type="text" name="add"><br>
+    <button type="button" onclick="printer()"> CLICK HERE </button>
+    <button type="button" onclick="abstract()"> ABSTRACT </button>
+
+
+
+    <script>
+
+        function printer() {
+
+            function person1(name, age, gender, address) {
+                this.id = name;
+                this.age = age;
+                this.gender = gender;
+                this.address = address;
+
+            }
+            
+            document.write("name:"+)
+        }
+
+    </script>
+
+    <script>
+        function abstract() {
+            class person {
+
+                constructor(name, age, gender, address) {
+                    this.name=name;
+                    this.age=age;
+                    this.gender=gender;
+                    this.address=address;
+
+                    if (this.constructor == person) {
+                        throw new Error(" Object of Abstract Class cannot be created");
+                    }
+                }
+                display() {
+                    throw new Error("Abstract Method has no implementation");
+                }
+            }
+
+            class Employee extends person {
+                constructor(name, age, gender, address, employeecode, department, designation, salary) {
+                    super(name, age, gender, address);
+                    this.emp_code = employeecode;
+                    this.dept = department;
+                    this.des= designation;
+                    this.salary = salary;
+
+
+                }
+
+                display() {
+                    document.write(emp.name + " " + emp.age + " " + emp.gender + " " + emp.address + " " + emp.emp_code + " " + emp.dept + " " + emp.des + " " + emp.salary);
+                }
+
+
+            }
+            var emp = new Employee();
+            emp.display();
+
+            
+
+        }
+
+    </script>
+
+</body>
+
+</html>
