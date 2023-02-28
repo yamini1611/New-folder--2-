@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding-right: 500px;
+    }
+</style>
+
+<body>
+    <h1 style="text-align: center;padding-left: 530PX;">METHODS IN JS</h1>
+    <div style="border:solid; background-color: rgb(247, 222, 224); float: right;padding-top: 20px;padding-right: 20px;padding-bottom: 20px;padding-left: 20px;"> <label>NAME:</label>
+        <input type="text" name="name"><br><br>
+        <label>AGE:</label>
+        <input type="number" name="age"><br><br>
+        <label>GENDER:</label>
+        <input type="text" name="gen"><br><br>
+        <label>ADDRESS:</label>
+        <input type="text" name="add"><br><br>
+        <button type="button" onclick="display()">PRESS ME!</button>
+        <button type="button" onclick="abstract()">CLICK ME</button></div>
+   
+    <script>
+        function display()
+        function person(name, age, gender, address) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.address = address;
+        }
+        e = new person("yamini", 20, "female", "12,vsk nagar")
+        document.write(e.name + " " + e.age + " " + e.gender + " " + e.address);
+    </script>
+    <script>
+        function abstract() {
+            class person {
+                constructor(name, age, gender, address) {
+                    this.name = name;
+                    this.age = age;
+                    this.gender = gender;
+                    this.address = address;
+
+                    if (this.constructor == person) {
+                        throw new error("object cannot be craeted for abstract ");
+                    }
+                }
+                display() {
+                    throw new Error("Abstract Method has no implementation");
+                }
+
+            }
+
+        
+
+        class employee extends person {
+            constructor(name, age, gender, address, emcode, salary, designation) {
+                super(name, age, gender, address);
+                this.emcode = employeecode;
+                this.salary = salary;
+                this.designation = desigantion
+            }
+            display() {
+                document.write(emp.name + " " + emp.age + " " + emp.gender + " " + emp.address + " " + emp.emp_code + " " + emp.dept + " " + emp.des + " " + emp.salary);
+            }
+        }
+        var emp = new employee("yamini", 20, "female", "12,vsk nagar", 1001, 25000, "full stack developer");
+        emp.display();
+        }
+    </script>
+</body>
+
+</html>
